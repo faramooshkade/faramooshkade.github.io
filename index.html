@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فراموشکده — حلقهٔ کتاب‌خوانی</title>
+<meta name="description" content="فراموشکده، حلقهٔ کتاب‌خوانی فارسی‌زبان. هر پنجشنبه ساعت ۱۸:۰۰ دور هم جمع می‌شویم، کتاب می‌خوانیم و گفتگو می‌کنیم.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --ground:  #F6F4F1;
+    --surface: #FFFFFF;
+    --ink:     #1F1D1B;
+    --ink-2:   #55504B;
+    --ink-3:   #857E77;
+    --rule:    #E1DCD5;
+    --shadow:  0 1px 2px rgba(31, 29, 27, .05), 0 8px 24px rgba(31, 29, 27, .05);
+    --fa: "Vazirmatn", "Nazli", "Noto Naskh Arabic", "Amiri", Tahoma, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground:  #15181C;
+      --surface: #1C2026;
+      --ink:     #E9E6E2;
+      --ink-2:   #B3ADA6;
+      --ink-3:   #8A847D;
+      --rule:    #2C323A;
+      --shadow:  0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--fa);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 54rem;
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 4.5rem) clamp(1.1rem, 4vw, 2rem) 3rem;
+  }
+
+  /* ---------- header ---------- */
+
+  header { text-align: center; margin-bottom: clamp(2.25rem, 5vw, 3.5rem); }
+
+  h1 {
+    font-size: clamp(2.1rem, 7vw, 3.1rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 .3rem;
+  }
+
+  .tagline { font-size: 1.1rem; color: var(--ink-2); margin: 0 0 1.25rem; }
+
+  .when {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .4rem 1.1rem;
+    padding: .5rem 1.1rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    font-size: .95rem;
+    color: var(--ink-2);
+  }
+
+  .intro {
+    max-width: 38rem;
+    margin: 1.75rem auto 0;
+    color: var(--ink-2);
+    text-align: justify;
+  }
+
+  /* ---------- sections ---------- */
+
+  section { margin-top: clamp(2.25rem, 5vw, 3.25rem); }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 .35rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+
+  h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .section-note { margin: 0 0 1.15rem; color: var(--ink-3); font-size: .95rem; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1rem;
+  }
+
+  /* ---------- cards ---------- */
+
+  .card {
+    --c:  #1b4a6a;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--c);
+    border-radius: 4px;
+    padding: 1.15rem 1.25rem 1.25rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+  }
+
+  .card.red   { --c: #6a1b1a; }
+  .card.blue  { --c: #1b4a6a; }
+  .card.green { --c: #1b6a4a; }
+  .card.sand  { --c: #6a541b; }
+
+  @media (prefers-color-scheme: dark) {
+    .card.red   { --c: #d98f8d; }
+    .card.blue  { --c: #8fb8d4; }
+    .card.green { --c: #8fd4b4; }
+    .card.sand  { --c: #d4bc8f; }
+  }
+
+  .card h3 { font-size: 1.15rem; font-weight: 700; margin: 0; color: var(--c); }
+  .card .sub { font-size: .93rem; color: var(--ink-3); margin: 0; }
+  .card p { margin: .35rem 0 0; color: var(--ink-2); font-size: .97rem; }
+
+  .files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-top: .85rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .files a {
+    display: inline-block;
+    padding: .22rem .7rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-size: .85rem;
+    color: var(--ink-2);
+    text-decoration: none;
+    transition: border-color .15s, color .15s, background-color .15s;
+  }
+
+  .files a:hover,
+  .files a:focus-visible {
+    border-color: var(--c);
+    color: var(--c);
+    background: var(--ground);
+  }
+
+  .files a:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+
+  .lat { direction: ltr; unicode-bidi: isolate; }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: .9rem;
+    color: var(--ink-3);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .files a { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <h1>فراموشکده</h1>
+    <p class="tagline">حلقهٔ کتاب‌خوانی فارسی‌زبان 📚</p>
+    <div class="when">
+      <span>🗓 هر پنجشنبه</span>
+      <span>⏰ ساعت ۱۸:۰۰</span>
+    </div>
+    <p class="intro">هفته‌ای یک بار دور هم جمع می‌شویم، بخشی از یک کتاب را می‌خوانیم و درباره‌اش گفتگو می‌کنیم: رمان‌های کلاسیک ایران و جهان، داستان کوتاه، نمایشنامه، شعر. فرقی نمی‌کند چقدر کتاب‌خوانِ حرفه‌ای باشید — در جمع ما به شما خوش می‌گذرد. آنچه در این صفحه می‌بینید دفترچه‌ها و فهرست‌هایی است که برای جلسه‌ها آماده کرده‌ایم.</p>
+  </header>
+
+  <section>
+    <h2>کتابِ بعدی را انتخاب کنیم</h2>
+    <p class="section-note">فهرستی برای رأی‌گیری در جمع؛ هر کتاب با پرسشی که در جلسه بحث را راه می‌اندازد.</p>
+    <div class="grid">
+
+      <article class="card green">
+        <h3>ده رمان زیر دویست صفحه</h3>
+        <p class="sub">کوتاه، بامزه، پرکشش — و ارزشِ بحث‌کردن دارند</p>
+        <p>ده رمانِ ادبیِ کوتاه از هشت کشور، از ولتر و بولگاکف تا سوسه‌کی و کالوینو، با پیشنهادِ اینکه هرکدام چه بحثی در جمع راه می‌اندازند.</p>
+        <ul class="files">
+          <li><a href="booklist.html">فارسی — <span class="lat">HTML</span></a></li>
+          <li><a href="booklist.pdf">فارسی — <span class="lat">PDF</span></a></li>
+          <li><a href="booklist-en.html"><span class="lat">English — HTML</span></a></li>
+          <li><a href="booklist-en.pdf"><span class="lat">English — PDF</span></a></li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>دفترچهٔ نویسندگان</h2>
+    <p class="section-note">خلاصه‌ای از زندگی، آثار و اهمیتِ نویسنده‌هایی که درباره‌شان خوانده‌ایم.</p>
+    <div class="grid">
+
+      <article class="card blue">
+        <h3>آنتون چخوف</h3>
+        <p class="sub">۱۸۶۰ – ۱۹۰۴ · داستان‌نویس و نمایشنامه‌نویس روس</p>
+        <p>زندگی، همسرش اولگا کنیپر، هنر و اهمیتِ او، و نگاهی به نمایشنامه‌ها و داستان‌های اصلی.</p>
+        <ul class="files">
+          <li><a href="chekhov.html">فارسی — <span class="lat">HTML</span></a></li>
+          <li><a href="chekhov.pdf">فارسی — <span class="lat">PDF</span></a></li>
+          <li><a href="chekhov.txt">فارسی — <span class="lat">TXT</span></a></li>
+          <li><a href="chekhov-en.html"><span class="lat">English — HTML</span></a></li>
+          <li><a href="chekhov-en.pdf"><span class="lat">English — PDF</span></a></li>
+        </ul>
+      </article>
+
+      <article class="card red">
+        <h3>آلبر کامو</h3>
+        <p class="sub">۱۹۱۳ – ۱۹۶۰ · نویسنده، فیلسوف و برندهٔ نوبل ادبیات</p>
+        <p>زندگی و زمینه، آثار اصلی، و فلسفهٔ پوچی و عصیان.</p>
+        <ul class="files">
+          <li><a href="camus.html">فارسی — <span class="lat">HTML</span></a></li>
+          <li><a href="camus.pdf">فارسی — <span class="lat">PDF</span></a></li>
+          <li><a href="camus.txt">فارسی — <span class="lat">TXT</span></a></li>
+        </ul>
+      </article>
+
+      <article class="card red">
+        <h3>آلبر کامو: اهمیت و جایگاه</h3>
+        <p class="sub">چرا اندیشهٔ او هنوز زنده است؟</p>
+        <p>یادداشتی جداگانه دربارهٔ جایگاهِ کامو در فلسفه، اخلاق و سیاستِ قرن بیستم.</p>
+        <ul class="files">
+          <li><a href="camus-importance.html">فارسی — <span class="lat">HTML</span></a></li>
+          <li><a href="camus-importance.pdf">فارسی — <span class="lat">PDF</span></a></li>
+          <li><a href="camus-importance.txt">فارسی — <span class="lat">TXT</span></a></li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>معرفی و دعوت</h2>
+    <p class="section-note">فایل‌های آمادهٔ چاپ برای معرفی گروه به دوستان.</p>
+    <div class="grid">
+
+      <article class="card sand">
+        <h3>پوستر</h3>
+        <p class="sub">قطع <span class="lat">A5</span></p>
+        <ul class="files">
+          <li><a href="tabligh/c-poster.pdf"><span class="lat">PDF</span></a></li>
+          <li><a href="tabligh/c-poster.png"><span class="lat">PNG</span></a></li>
+          <li><a href="tabligh/c-poster.html"><span class="lat">HTML</span></a></li>
+        </ul>
+      </article>
+
+      <article class="card sand">
+        <h3>کارت دعوت</h3>
+        <p class="sub">قطع <span class="lat">A5</span> و <span class="lat">A6</span></p>
+        <ul class="files">
+          <li><a href="tabligh/d-card-a5.pdf"><span class="lat">A5 — PDF</span></a></li>
+          <li><a href="tabligh/d-card-a5.png"><span class="lat">A5 — PNG</span></a></li>
+          <li><a href="tabligh/a-card.pdf"><span class="lat">A6 — PDF</span></a></li>
+          <li><a href="tabligh/a-card.png"><span class="lat">A6 — PNG</span></a></li>
+        </ul>
+      </article>
+
+      <article class="card sand">
+        <h3>لای‌کتابی</h3>
+        <p class="sub">نشانکِ کتاب</p>
+        <ul class="files">
+          <li><a href="tabligh/b-bookmark.pdf"><span class="lat">PDF</span></a></li>
+          <li><a href="tabligh/b-bookmark.png"><span class="lat">PNG</span></a></li>
+          <li><a href="tabligh/b-bookmark.html"><span class="lat">HTML</span></a></li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>فراموشکده — حلقهٔ کتاب‌خوانی · هر پنجشنبه ساعت ۱۸:۰۰</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
