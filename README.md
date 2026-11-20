@@ -17,7 +17,7 @@ next to it.
 | --- | --- |
 | کتاب‌هایی که خوانده‌ایم — books we have read | generated into `index.html` between the `READ-BOOKS` markers |
 | کتابِ بعدی را انتخاب کنیم — booklist to vote on | `booklist.{html,pdf}`, `booklist-en.{html,pdf}` |
-| دفترچهٔ نویسندگان — author notes | `chekhov.{html,pdf,txt}`, `chekhov-en.{html,pdf}`, `camus.{html,pdf,txt}`, `camus-importance.{html,pdf,txt}`, `bukowski.{html,pdf}`, `bukowski-en.{html,pdf}` |
+| دفترچهٔ نویسندگان — author notes | `chekhov.{html,pdf,txt}`, `chekhov-en.{html,pdf}`, `camus.{html,pdf,txt}`, `camus-importance.{html,pdf,txt}`, `bukowski.{html,pdf}`, `bukowski-en.{html,pdf}`, `pratchett.pdf`, `pratchett-en.pdf` |
 | معرفی و دعوت — print material | `tabligh/` (poster, invitation cards, bookmark) and `advertisement.png` |
 
 Each handout exists in Persian and, where it makes sense, in English; PDFs are
